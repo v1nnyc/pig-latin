@@ -6,7 +6,6 @@
 //
 //
 
-//#include "reverse.hpp"
 #include <iostream>
 #include <stdio.h>
 #include <string.h>
@@ -22,12 +21,13 @@ int main(int argc, char** argv){
         return -1;
     }
     
-    char* input = argv[1];
-    char* size = argv[2];
+    char* input = argv[1]; //word to translate
+    char* size = argv[2]; //size of word/to make array
     
     char firstLet = input[0];
     char* newInput = new char[(*size) + 4];
     
+    //copying array to new array
     for(int i = 0; i < (*size)-1; i++){
         newInput[i] = input[i+1];
     }
